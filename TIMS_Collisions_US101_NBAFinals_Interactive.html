@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4cf77e8592960e4aecb011589e0ce145 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+position: fixed;
+top: 20px;
+left: 50px;
+width: 360px;
+z-index: 9999;
+background-color: white;
+border: 2px solid black;
+border-radius: 6px;
+padding: 12px;
+font-size: 13px;
+box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+">
+<h4 style="margin-top:0;">TIMS Collisions on US-101 During NBA Finals Game Dates</h4>
+<b>What it shows:</b><br>
+Geocoded collision data from UC Berkeley TIMS plotted along the US-101 corridor during the June 2022 Chase Center NBA Finals game dates.<br><br>
+
+<b>Interactive element:</b><br>
+Click each collision marker to view the timestamp, primary collision factor, violation category, collision type, and severity.<br><br>
+
+<b>Why it matters:</b><br>
+These records help identify whether a traffic bottleneck may have been caused by a crash rather than stadium-related travel demand.
+</div>
+    
+            <div class="folium-map" id="map_4cf77e8592960e4aecb011589e0ce145" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4cf77e8592960e4aecb011589e0ce145 = L.map(
+                "map_4cf77e8592960e4aecb011589e0ce145",
+                {
+                    center: [37.755, -122.395],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_532cdfa17b7983c3fc89dbf5f1c783d5 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_532cdfa17b7983c3fc89dbf5f1c783d5.addTo(map_4cf77e8592960e4aecb011589e0ce145);
+        
+    
+            var poly_line_794eb9bb90beba78f6628c71022f50f8 = L.polyline(
+                [[37.7085, -122.404], [37.731, -122.403], [37.7485, -122.399], [37.765, -122.394], [37.781, -122.395], [37.806, -122.406]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_4cf77e8592960e4aecb011589e0ce145);
+        
+    
+            poly_line_794eb9bb90beba78f6628c71022f50f8.bindTooltip(
+                `<div>
+                     US-101 corridor
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2649b9ce40d49552d24c0653ac1f2284 = L.marker(
+                [37.768, -122.3877],
+                {
+}
+            ).addTo(map_4cf77e8592960e4aecb011589e0ce145);
+        
+    
+            var icon_94974599bcf084d557890d8eaf4f89a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d78d043ed21d0048ac4ebcaa82734ec8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd801ab230b82f585db43ab447509691 = $(`<div id="html_cd801ab230b82f585db43ab447509691" style="width: 100.0%; height: 100.0%;"><b>Chase Center</b><br>2022 NBA Finals event site</div>`)[0];
+                popup_d78d043ed21d0048ac4ebcaa82734ec8.setContent(html_cd801ab230b82f585db43ab447509691);
+            
+        
+
+        marker_2649b9ce40d49552d24c0653ac1f2284.bindPopup(popup_d78d043ed21d0048ac4ebcaa82734ec8)
+        ;
+
+        
+    
+    
+            marker_2649b9ce40d49552d24c0653ac1f2284.bindTooltip(
+                `<div>
+                     Chase Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2649b9ce40d49552d24c0653ac1f2284.setIcon(icon_94974599bcf084d557890d8eaf4f89a2);
+            
+    
+            var circle_marker_a74e19970a9036038a9df94b10103b01 = L.circleMarker(
+                [37.72579956054688, -122.4019012451172],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11, "stroke": true, "weight": 3}
+            ).addTo(map_4cf77e8592960e4aecb011589e0ce145);
+        
+    
+        var popup_1e0baa8a4712ec45100ec9a7b5725132 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b268139c96c267c7ed00fcd791b503ba = $(`<div id="html_b268139c96c267c7ed00fcd791b503ba" style="width: 100.0%; height: 100.0%;">         <b>TIMS Collision Record</b><br><br>         <b>Case ID:</b> 91799101<br>         <b>Date:</b> 2022-06-13<br>         <b>Timestamp:</b> 120<br>         <b>Primary Collision Factor:</b> A<br>         <b>Violation Category:</b> 3<br>         <b>Collision Type:</b> C<br>         <b>Severity:</b> 3<br>         <b>Primary Road:</b> US-101 NORTHBOUND<br>         </div>`)[0];
+                popup_1e0baa8a4712ec45100ec9a7b5725132.setContent(html_b268139c96c267c7ed00fcd791b503ba);
+            
+        
+
+        circle_marker_a74e19970a9036038a9df94b10103b01.bindPopup(popup_1e0baa8a4712ec45100ec9a7b5725132)
+        ;
+
+        
+    
+    
+            circle_marker_a74e19970a9036038a9df94b10103b01.bindTooltip(
+                `<div>
+                     Click for collision factor and timestamp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
