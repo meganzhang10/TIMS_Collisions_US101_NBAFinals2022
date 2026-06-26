@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_eab57b753920f991382243d5bfd020a6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_eab57b753920f991382243d5bfd020a6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_eab57b753920f991382243d5bfd020a6 = L.map(
+                "map_eab57b753920f991382243d5bfd020a6",
+                {
+                    center: [37.76, -122.405],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9ea3f6365e156c71d3c0f8fef926b586 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9ea3f6365e156c71d3c0f8fef926b586.addTo(map_eab57b753920f991382243d5bfd020a6);
+        
+    
+            var poly_line_881f982eba93b0166e068c4801562f8e = L.polyline(
+                [[37.7085, -122.404], [37.731, -122.403], [37.7485, -122.399], [37.765, -122.394], [37.781, -122.395], [37.806, -122.406]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_eab57b753920f991382243d5bfd020a6);
+        
+    
+            poly_line_881f982eba93b0166e068c4801562f8e.bindTooltip(
+                `<div>
+                     US-101 Corridor
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_240a5e6a921034838754b2dc458fc394 = L.marker(
+                [37.768, -122.3877],
+                {
+}
+            ).addTo(map_eab57b753920f991382243d5bfd020a6);
+        
+    
+            var icon_907cd79856231d1e59c15ba0c2623d56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c03af6dfe75a2370e5cb6775b5ee2f6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3deb9eb8863a700d92f34f22071b07fc = $(`<div id="html_3deb9eb8863a700d92f34f22071b07fc" style="width: 100.0%; height: 100.0%;">     <b>Chase Center</b><br>     Golden State Warriors<br>     2022 NBA Finals Home Venue     </div>`)[0];
+                popup_c03af6dfe75a2370e5cb6775b5ee2f6e.setContent(html_3deb9eb8863a700d92f34f22071b07fc);
+            
+        
+
+        marker_240a5e6a921034838754b2dc458fc394.bindPopup(popup_c03af6dfe75a2370e5cb6775b5ee2f6e)
+        ;
+
+        
+    
+    
+            marker_240a5e6a921034838754b2dc458fc394.bindTooltip(
+                `<div>
+                     Chase Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_240a5e6a921034838754b2dc458fc394.setIcon(icon_907cd79856231d1e59c15ba0c2623d56);
+            
+    
+            var circle_marker_db90fbc1878c344455b5bedcb660c232 = L.circleMarker(
+                [37.72579956054688, -122.4019012451172],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_eab57b753920f991382243d5bfd020a6);
+        
+    
+        var popup_591e69f8c23228386ac82ea45c3c07a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d3b91fb81c9704bdeceae9f5613a078 = $(`<div id="html_9d3b91fb81c9704bdeceae9f5613a078" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 13, 2022<br><br>          <b>Timestamp:</b><br>         1:20 AM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         3<br><br>          <b>Collision Type:</b><br>         C<br><br>          <b>Collision Severity:</b><br>         3<br><br>          <b>Primary Road:</b><br>         US-101 NORTHBOUND<br>          <b>Secondary Road:</b><br>         THE PAUL AVENUE UNDERCROSSING         </div>`)[0];
+                popup_591e69f8c23228386ac82ea45c3c07a6.setContent(html_9d3b91fb81c9704bdeceae9f5613a078);
+            
+        
+
+        circle_marker_db90fbc1878c344455b5bedcb660c232.bindPopup(popup_591e69f8c23228386ac82ea45c3c07a6)
+        ;
+
+        
+    
+    
+            circle_marker_db90fbc1878c344455b5bedcb660c232.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
